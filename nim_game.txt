@@ -1,0 +1,5 @@
+class Solution:
+    def canWinNim(self, n: int) -> bool:
+        k=n%4!=0
+        return k
+        

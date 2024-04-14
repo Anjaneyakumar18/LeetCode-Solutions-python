@@ -1,0 +1,12 @@
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        fact=factorial(n)
+        count=0
+        while True:
+            if fact%10==0:
+                count+=1
+            else:
+                return count
+            fact//=10
+
+        

@@ -1,0 +1,13 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        min_num=min(nums)
+        temp=min_num
+        if 0 not in nums:
+            return 0
+        while 1:
+            if temp in nums:
+                temp+=1
+            else:
+                return temp
+
+        

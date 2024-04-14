@@ -1,0 +1,18 @@
+class Solution:
+    def s_d(self,n:int)-> int:
+        result=0
+        while n!=0:
+            num=n%10
+            num=num**2
+            result+=num
+            n=n//10
+        return result
+    def isHappy(self, n: int) -> bool:
+        exist=set()
+        while n not in exist:
+           exist.add(n)
+           n=self.s_d(n)
+           if n==1:
+               return True
+        return False
+   

@@ -1,0 +1,9 @@
+class Solution:
+    def accountBalanceAfterPurchase(self, p: int) -> int:
+        k=p%10
+        if k>=5:
+            p=p+(10-k)
+        elif k<5:
+            p=p-k
+        return 100-p
+        

@@ -1,0 +1,10 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> List[int]:
+        set_num=list(set(nums))
+        nu=[]
+        for i in range(len(set_num)):
+            if nums.count(set_num[i])<2:
+                nu.append(set_num[i])
+        return nu
+
+        

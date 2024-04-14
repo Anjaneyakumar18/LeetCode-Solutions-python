@@ -1,0 +1,13 @@
+class Solution:
+    def judgeSquareSum(self, c: int) -> bool:
+        for num in range(int(c**0.5) + 1):
+            complement = c - num**2
+            if self.isPerfectSquare(complement):
+                return True
+        return False
+
+    def isPerfectSquare(self, num: int) -> bool:
+        if num < 0:
+            return False
+        sqrt = int(num ** 0.5)
+        return sqrt * sqrt == num

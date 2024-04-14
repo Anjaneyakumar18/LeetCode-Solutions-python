@@ -1,0 +1,18 @@
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        if target not in nums:
+            return [-1,-1]
+        k,m=0,0
+        for i in range(len(nums)):
+            if nums[i]==target:
+                k=i
+                break
+        for j in range(len(nums)-1,-1,-1):
+            if nums[j]==target:
+                m=j
+                break
+        return [k,m]
+
+        
+
+        

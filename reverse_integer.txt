@@ -1,0 +1,18 @@
+class Solution:
+    def reverse(self, x: int) -> int:
+        x=str(x)
+        if x[0]=='-':
+            k=x[1:][::-1]
+            k=int('-'+k)
+            if k<-2147483648:
+                return 0
+            else:
+                return k
+        else:
+            k=int(x[::-1])
+            
+            if k>2147483648:
+                return 0
+            else:
+                return  int(k)
+        

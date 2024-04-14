@@ -1,0 +1,9 @@
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        nums=list(set(nums))
+        m=nums[0]
+        for num in nums:
+            if num<m:
+                m=num
+        return m
+        

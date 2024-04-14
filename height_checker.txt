@@ -1,0 +1,11 @@
+class Solution:
+    def heightChecker(self, heights: List[int]) -> int:
+        dep_hi=heights.copy()
+        dep_hi.sort()
+        c=0
+        for i in range(len(dep_hi)):
+            if heights[i]!=dep_hi[i]:
+                c+=1
+        return c
+
+        

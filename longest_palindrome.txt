@@ -1,0 +1,27 @@
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        odds=[]
+        evens=[]
+        chars=[]
+        for i in range(len(s)):
+            chars.append(s[i])
+        sets=list(set(chars))
+        for i in range(len(sets)):
+            if (s.count(sets[i]))%2==0:
+                evens.append(s.count(sets[i]))
+            else:
+                odds.append(s.count(sets[i]))
+        odds.sort()
+        if len(evens)==0:
+            return sum(odds)-(len(odds)-1)
+        elif len(odds)==0:
+            return sum(evens)
+        else:
+            last=odds.pop()
+            length=(sum(evens)+last)+(sum(odds)-len(odds))
+            return length
+            
+        
+
+
+        

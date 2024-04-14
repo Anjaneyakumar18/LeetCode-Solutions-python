@@ -1,0 +1,14 @@
+class Solution:
+    def findWords(self, words: List[str]) -> List[str]:
+        set1=set("qwertyuiop")
+        set2=set("asdfghjkl")
+        set3=set("zxcvbnm")
+        to_ret=[]
+        for word in words:
+            small_word=word.lower()
+            word_set=set(small_word)
+            if word_set.issubset(set1) or word_set.issubset(set2) or word_set.issubset(set3):
+                to_ret.append(word)
+        return to_ret
+
+        

@@ -1,0 +1,18 @@
+class Solution:
+    def intersection(self, nums: List[List[int]]) -> List[int]:
+        res=[]
+        f=False
+        for num in nums[0]:
+            for lists in nums:
+                if num in lists:
+                    f=True
+                else:
+                    f=False
+                    break
+            if f:
+                res.append(num)
+        res.sort()
+        return res
+                   
+
+        
